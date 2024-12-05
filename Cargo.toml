@@ -1,0 +1,17 @@
+[package]
+name = "scroll"
+version = "0.1.0"
+authors = ["DioxusGrow <dioxusgrow@proton.me>"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = { git = "https://github.com/DioxusLabs/dioxus", rev = "f3b6ec5", features = ["router"] }
+dioxus-logger = "0.5"
+
+[features]
+default = ["web"]
+web = ["dioxus/web"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]
